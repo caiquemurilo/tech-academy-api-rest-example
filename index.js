@@ -7,7 +7,8 @@ const app = express();
 app.use(express.json());
 // definindo que todos os requests vão estar sendo enviados objetos no formato json
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+//primeiro vai tentar pegar o valor da const pela variável de ambiente. Caso não consiga, vai ser 3000
 //estou colocando o numero da porta utilizada numa constante adequada para tal
 
 let users = [
